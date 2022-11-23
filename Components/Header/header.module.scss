@@ -1,0 +1,156 @@
+.header {
+  padding: 40px 0 40px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigation {
+  > ul {
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+
+    > li {
+      a {
+        font-family: 'Inter', serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: -0.02em;
+      }
+    }
+  }
+}
+
+.social {
+  > ul {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+  }
+}
+
+.mobile, .mobileNavi {
+  display: none;
+}
+
+
+.mobileOpen {
+  padding-left: 25px;
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  width: 100%;
+  height: 100vh;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='768' height='560' preserveAspectRatio='none' viewBox='0 0 768 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1006%26quot%3b)' fill='none'%3e%3crect width='768' height='560' x='0' y='0' fill='rgba(231%2c 250%2c 254%2c 1)'%3e%3c/rect%3e%3cpath d='M0%2c362.069C66.672%2c364.719%2c113.888%2c300.561%2c171.211%2c266.41C230.975%2c230.804%2c318.262%2c221.731%2c344.022%2c157.109C369.915%2c92.153%2c306.953%2c26.458%2c294.276%2c-42.31C282.285%2c-107.357%2c310.325%2c-181.731%2c271.666%2c-235.4C232.519%2c-289.747%2c160.616%2c-312.917%2c94.045%2c-320.289C32.992%2c-327.05%2c-21.436%2c-291.02%2c-80.573%2c-274.408C-140.586%2c-257.55%2c-209.065%2c-262.816%2c-256.116%2c-221.926C-305.504%2c-179.005%2c-344.716%2c-114.161%2c-340.065%2c-48.894C-335.502%2c15.138%2c-265.239%2c50.93%2c-232.73%2c106.284C-204.697%2c154.017%2c-199.936%2c212.194%2c-162.682%2c253.138C-117.854%2c302.406%2c-66.557%2c359.424%2c0%2c362.069' fill='%23c6f3fd'%3e%3c/path%3e%3cpath d='M768 826.656C833.013 825.274 900.157 885.6410000000001 957.126 854.2860000000001 1013.505 823.256 1013.857 742.4300000000001 1032.783 680.922 1049.328 627.152 1067.536 573.759 1060.624 517.927 1053.626 461.4 1030.645 407.783 993.611 364.507 956.435 321.06399999999996 908.402 283.184 851.953 274.082 797.831 265.355 746.999 295.192 696.533 316.605 651.502 335.712 611.583 360.554 574.096 391.981 530.09 428.874 473.665 460.032 459.169 515.597 444.387 572.261 479.757 627.645 498.11 683.255 518.843 746.078 515.2139999999999 831.3969999999999 573.635 862.438 633.013 893.9870000000001 700.776 828.085 768 826.656' fill='white'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1006'%3e%3crect width='768' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: slide-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  @keyframes slide-bottom {
+    0% {
+
+      transform: translateY(-400px);
+    }
+    100% {
+      transition: 0.5s;
+      transform: translateY(0);
+    }
+  }
+}
+
+.mobileNav {
+  margin: 50px 0 0;
+
+  > ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+
+    > li {
+      transition: all 0.9s ease;
+
+      a {
+        font-size: 50px;
+        cursor: pointer;
+        color: #666666;
+      }
+
+      &:hover {
+        transition: all 0.4s ease;
+        scale: 1.1;
+
+      }
+
+    }
+  }
+}
+
+.socialMobile {
+  display: block;
+
+  > ul {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    align-items: center;
+
+    li {
+      svg {
+        font-size: 25px;
+        transition: all 0.9s ease;
+
+        path {
+          fill: #666666;
+
+        }
+
+        &:hover {
+          scale: 1.2;
+          transition: all 0.2s ease;
+
+        }
+      }
+    }
+  }
+}
+
+.btn {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  align-items: center;
+  cursor: pointer;
+
+  &:hover{
+    svg{
+      scale:1.2;
+      transition: all 0.2s ease;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navigation, .social {
+    display: none;
+  }
+  .mobileNavi{
+    display: block;
+  }
+
+}

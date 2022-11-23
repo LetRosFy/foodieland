@@ -1,0 +1,158 @@
+.slaider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slaiderItem {
+  position: relative;
+  margin-top: 40px;
+  width: 1280px;
+  height: 640px;
+  background: #E7FAFE;
+  border-radius: 55px;
+}
+
+.slaiderImg {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  > img {
+    border-radius: 0 55px 55px 0;
+  }
+}
+
+.content {
+  position: relative;
+  margin-top: 50px;
+
+  .contentRecipes {
+    width: 156px;
+    background: #FFFFFF;
+    border-radius: 30px;
+
+    > p {
+      font-family: 'Inter', serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 17px;
+      /* identical to box height */
+
+      letter-spacing: -0.02em;
+
+      color: #000000;
+      padding: 11px 20px 10px 20px;
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      gap: 13px;
+    }
+  }
+
+  .title {
+    margin-top: 32px;
+
+    > h1 {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 64px;
+      line-height: 77px;
+      letter-spacing: -0.04em;
+      width: 520px;
+    }
+
+    > p {
+      margin: 24px 0 30px;
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 28px;
+      color: rgba(0, 0, 0, 0.6);
+      width: 520px;
+    }
+  }
+
+  .dataTag {
+    display: flex;
+    flex-direction: row;
+
+    gap: 16px;
+
+    .data, .tag {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 10px;
+      // styles item
+      padding: 8px 16px 8px;
+      font-family: 'Inter', serif;
+      background: rgba(0, 0, 0, 0.05);
+      border-radius: 30px;
+    }
+  }
+
+  .authorButton {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 157px;
+    margin-top: 100px;
+    .author {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 16px;
+
+      > div {
+        > p:first-child {
+          font-family: 'Inter';
+          font-style: normal;
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 19px;
+          letter-spacing: -0.02em;
+          color: #000000;
+        }
+
+        > p {
+          font-family: 'Inter';
+          font-style: normal;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 17px;
+          /* identical to box height */
+          letter-spacing: -0.02em;
+          color: rgba(0, 0, 0, 0.6);
+        }
+      }
+
+    }
+    >a{
+      display: flex;
+      flex-direction: row;
+      gap: 16px;
+      align-items: center;
+      background: #000000;
+      border-radius: 16px;
+      padding: 18px 36px 18px 37px;
+      //text
+      font-family: 'Inter', serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 17px;
+      letter-spacing: -0.02em;
+      color: #FFFFFF;
+    }
+  }
+  .logohead{
+    position: absolute;
+    top: 0;
+    left: 555px;
+    z-index: 3;
+  }
+}
