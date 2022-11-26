@@ -21,7 +21,9 @@
     gap: 60px;
 
     > li {
+
       a {
+        cursor: pointer;
         font-family: 'Inter', serif;
         font-style: normal;
         font-weight: 500;

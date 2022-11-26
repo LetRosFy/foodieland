@@ -3,6 +3,8 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Slaider from "../Components/SlaiderHead/Slaider/Slaider";
 import Categories from "../Components/Categories/Categories";
+import RecipesHome from "../Components/Recipes/Recipes";
+
 
 export default function Home() {
   return (
@@ -15,6 +17,7 @@ export default function Home() {
         <Slaider/>
         <div className={styles.container}>
             <Categories/>
+            <RecipesHome/>
         </div>
 
       {/*<main className={styles.main}>*/}

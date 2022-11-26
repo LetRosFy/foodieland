@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './categories.module.scss'
 import Link from "next/link";
+import Image from "next/image";
 
 const items = [
     {
@@ -14,7 +15,7 @@ const items = [
         img:"c2.svg",
     },
     {
-        id:Math.random(),
+        id:1,
         title:'Meat',
         img:"c3.svg",
     },
@@ -46,7 +47,7 @@ const Categories = () => {
             <div className={styles.items}>
                 {items.map(item=>(
                     <div className={styles.item} key={item.id}>
-                        <img src={"./img/" + item.img} alt="content"/>
+                        <Image src={"/img/" + item.img} alt="content" width={100} height={100}/>
                         <h3>{item.title}</h3>
                     </div>
                 ))}
