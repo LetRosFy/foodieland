@@ -4,6 +4,8 @@ import styles from '../styles/Home.module.css'
 import Slaider from "../Components/SlaiderHead/Slaider/Slaider";
 import Categories from "../Components/Categories/Categories";
 import RecipesHome from "../Components/Recipes/Recipes";
+import Learn from "../Components/Learn more/Learn";
+import Instagram from "../Components/Instagram/Instagram";
 
 
 export default function Home() {
@@ -18,7 +20,9 @@ export default function Home() {
         <div className={styles.container}>
             <Categories/>
             <RecipesHome/>
+            <Learn/>
         </div>
+        <Instagram/>
 
       {/*<main className={styles.main}>*/}
       {/*  <h1 className={styles.title}>*/}

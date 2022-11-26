@@ -1,0 +1,56 @@
+.learn {
+  margin-top: 109px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 44px;
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 72px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    h3 {
+      width: 526px;
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 48px;
+      line-height: 58px;
+      letter-spacing: -0.04em;
+      color: #000000;
+    }
+
+    p {
+      width: 508px;
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 28px;
+      color: rgba(0, 0, 0, 0.6);
+    }
+  }
+  &__btn{
+    a{
+      background: #000000;
+      border-radius: 16px;
+      border: none;
+      padding: 21px 53px 22px 52px;
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 17px;
+      letter-spacing: -0.02em;
+      color: #FFFFFF;
+    }
+  }
+}
