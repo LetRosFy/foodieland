@@ -30,8 +30,8 @@ const data = [
         title: 'Strawberry Oatmeal Pancake with Honey Syrup',
         time: '30 Minutes',
         tag: 'Breakfast',
-        isCompleted: true,
-    },
+        isCompleted: false,
+    }
 //     {
 //     id: Math.random(),
 //     img: 'r4.svg',
@@ -77,7 +77,6 @@ const data = [
 //     tag: 'Breakfast',
 //     isCompleted: "false",
 // },
-
 ]
 
 const RecipesItem = () => {
@@ -110,7 +109,7 @@ const RecipesItem = () => {
                     <div className={styles.img}>
                         <Image src={'/img/' + img} alt={'img'} width={368} height={250}/>
                         <Like
-                            post={id}
+                            post={post.id}
                             isCompleted={isCompleted}
                             likeClick={likeClick}
                         />
