@@ -6,6 +6,7 @@ import Categories from "../Components/Categories/Categories";
 import RecipesHome from "../Components/Recipes/Recipes";
 import Learn from "../Components/Learn more/Learn";
 import Instagram from "../Components/Instagram/Instagram";
+import MoreRecipes from "../Components/More Recipes/moreRecipes";
 
 
 export default function Home() {
@@ -21,8 +22,12 @@ export default function Home() {
             <Categories/>
             <RecipesHome/>
             <Learn/>
+
         </div>
         <Instagram/>
+        <div className={styles.container}>
+            <MoreRecipes/>
+        </div>
 
       {/*<main className={styles.main}>*/}
       {/*  <h1 className={styles.title}>*/}

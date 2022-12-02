@@ -11,21 +11,21 @@ import Like from "./Like";
 
 const data = [
     {
-        id: Math.random(),
+        _id: Math.random(),
         img: 'r1.svg',
         title: 'Mixed Tropical Fruit Salad with Superfood Boosts ',
         time: '30 Minutes',
         tag: 'Healthy',
         isCompleted: true,
     }, {
-        id: Math.random(),
+        _id: Math.random(),
         img: 'r2.svg',
         title: 'Fresh Lime Roasted Salmon with Ginger Sauce',
         time: '30 Minutes',
         tag: 'Fish',
         isCompleted: false,
     }, {
-        id: Math.random(),
+        _id: Math.random(),
         img: 'r3.svg',
         title: 'Strawberry Oatmeal Pancake with Honey Syrup',
         time: '30 Minutes',
@@ -81,11 +81,11 @@ const data = [
 
 const RecipesItem = () => {
     const [post, setPost] = React.useState(data)
-    const [loading, setLoading] = React.useState(true);
+    const [loading, setLoading] = React.useState(false);
 
-    const likeClick = id => {
+    const likeClick = (id) => {
         const copy = [...post]
-        const current = copy.find(t => t.id === id)
+        const current = copy.find(t => t._id === id)
         current.isCompleted = !current.isCompleted
 
         setPost(copy)
@@ -93,23 +93,22 @@ const RecipesItem = () => {
     console.log(post)
 
 
-    useEffect(() => {
-
-        setTimeout(() => setLoading(false), 200)
-        setPost(post);
-    }, [post]);
+    // useEffect(() => {
+    //     setTimeout(() => setLoading(false), 200)
+    //     setPost(post);
+    // }, [post]);
 
 
     return (
 
         <div className={styles.items}>
-            {loading ? "Loading..." : post.map(({id, img, title, tag, time, isCompleted}) => (
+            {loading ? "Loading..." : post.map(({_id, img, title, tag, time, isCompleted}) => (
                 <div className={styles.item}
-                     key={id}>
+                     key={_id}>
                     <div className={styles.img}>
-                        <Image src={'/img/' + img} alt={'img'} width={368} height={250}/>
+                        <Image src={'/img/' + img} alt={title} width={368} height={250}/>
                         <Like
-                            post={post.id}
+                            posts={_id}
                             isCompleted={isCompleted}
                             likeClick={likeClick}
                         />
